@@ -1,11 +1,10 @@
 const { fork } = require('child_process');
 const path = require('path');
 
-const getRandomTime = () => Math.floor(Math.random() * 10000);
-
 async function main () {
     const script = path.resolve(__dirname, 'child.js');
     const scriptArgs = [`--jobId=${Date.now()}`, ];
+    const getRandomTime = () => Math.floor(Math.random() * 10000);
 
     const childProcess = fork(script, scriptArgs);
 
