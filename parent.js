@@ -22,8 +22,6 @@ async function main () {
             childProcess.send({ command: 'exit', exitCode });
         });
     
-    const multiplier = 500;
-
     childProcess.send({
         command: 'begin',
         resolveTimeout: getRandomTime(),
